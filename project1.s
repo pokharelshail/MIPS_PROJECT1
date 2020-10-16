@@ -27,4 +27,11 @@ Start:
 	lb $a0, 0($s1)
 	j GetValue
 
+GetValue:	
+	
+	li $t1, 48 #numeric lower bound
+	li $t2, 57 #numeric upper bound
+	li $t3, 64 #base 28 lower bound letter A
+	li $t4, 82 #base 28 upper bound letter R
+
 	
