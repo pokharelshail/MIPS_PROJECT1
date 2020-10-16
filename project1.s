@@ -70,4 +70,10 @@ Uppercase:
 	add $s0, $s0, $s3
 	j Increment
 
+Lowercase:
+	li $s2, -87	
+	add $s3, $a0, $s2
+	add $s0, $s0, $s3
+	j Increment
+
 	
