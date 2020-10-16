@@ -26,6 +26,10 @@ Start:
 
 	lb $a0, 0($s1)
 	j GetValue
+Increment:	
+	beq $s4, $s1, End 
+	addi $s1,$s1 1 #increment to next input character
+	j Start
 
 GetValue:	
 	
