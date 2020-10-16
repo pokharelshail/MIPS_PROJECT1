@@ -1,4 +1,5 @@
-#base 28 
+#base 28
+#SHREESHAIL POKHAREL COMP ORG I
 .data
 
 inputText:.asciiz "Input: "
