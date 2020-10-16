@@ -3,7 +3,7 @@
 
 inputText:.asciiz "Input: "
 base28num:.space 11
-space:.asciiz "\n"
+newline:.asciiz "\n"
 outputText: .asciiz
 
 .text
@@ -77,6 +77,11 @@ Lowercase:
 	j Increment
 
 End:
+	
+	li $v0, 4
+	la $a0, newline
+	syscall 
+
 	
 	li $v0, 10
 	syscall
