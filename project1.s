@@ -1,9 +1,11 @@
 #base 28 
 .data
+
 inputText:.asciiz "Input: "
 base28num:.space 11
 space:.asciiz "\n"
 outputText: .asciiz
+
 .text
 main:	
 	#print input prompt Input: 
@@ -20,5 +22,9 @@ main:
 	la $s1, base28num
 	addi $s4, $s1, 10 
 
+Start:
+
+	lb $a0, 0($s1)
+	j GetValue
 
 	
