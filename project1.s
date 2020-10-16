@@ -76,4 +76,8 @@ Lowercase:
 	add $s0, $s0, $s3
 	j Increment
 
+End:
+	
+	li $v0, 10
+	syscall
 	
