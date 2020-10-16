@@ -46,6 +46,12 @@ GetValue:
 	ble $a0, $t6, more
 
 more:
+	
+	bge $a0, $t5, Lowercase
+	bgt $a0, $t4, Novalue
+	bgt $a0, $t3, Uppercase
+	bgt $a0, $t2, Novalue
+	bge $a0, $t1, Numeric
 
 Novalue:
 	add $s0, $s0, $zero
