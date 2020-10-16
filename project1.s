@@ -1,19 +1,10 @@
 #base 28
 #SHREESHAIL POKHAREL COMP ORG I
 .data
-
-inputText:.asciiz "Input: "
 base28num:.space 11
-
-
 .text
 
 main:	
-	#print input prompt Input: 
-	li $s0, 0 
-	li $v0, 4
-	la $a0, inputText
-	syscall
 	#Get User input
 	li $v0, 8						
 	la $a0, base28num
