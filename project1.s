@@ -83,6 +83,10 @@ End:
 	la $a0, newline
 	syscall 
 
+	li $v0, 4
+	la $a0, outputText
+	syscall
+
 	li $v0, 1
 	add $a0, $s0, $zero
 	syscall
