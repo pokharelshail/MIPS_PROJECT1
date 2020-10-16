@@ -78,8 +78,7 @@ Lowercase:
 	j Increment
 
 End:
-	
-
+	#The output is the 11th element.
 	li $v0, 1
 	add $a0, $s0, $zero
 	syscall
