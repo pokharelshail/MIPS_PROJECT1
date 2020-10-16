@@ -33,5 +33,16 @@ GetValue:
 	li $t2, 57 #numeric upper bound
 	li $t3, 64 #base 28 lower bound letter A
 	li $t4, 82 #base 28 upper bound letter R
+	li $t5, 97 #base 28 lower bound letter a
+	li $t6, 114 #base 28 upper bound letter r
+	
+	blt $a0, $t1, Novalue
+	bgt $a0,$t6, Novalue
+	ble $a0, $t6, more
+
+
+Novalue:
+	add $s0, $s0, $zero
+	j Increment
 
 	
