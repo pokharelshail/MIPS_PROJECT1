@@ -4,27 +4,28 @@
 inputText:.asciiz "Input: "
 base28num:.space 11
 newline:.asciiz "\n"
-outputText: .asciiz
+outputText: .asciiz "Output: "
 
 .text
+
 main:	
 	#print input prompt Input: 
 	li $s0, 0 
 	li $v0, 4
 	la $a0, inputText
 	syscall
-	
+	#Get User input
 	li $v0, 8						
 	la $a0, base28num
 	li $a1, 11
 	syscall
-
+    #load input to #s1
 	la $s1, base28num
 	addi $s4, $s1, 10 
 
 Start:
 
-	lb $a0, 0($s1)
+	lb $a0, 0($s1) #get first character load the byte of first character
 	j GetValue
 
 Increment:	
@@ -82,6 +83,9 @@ End:
 	la $a0, newline
 	syscall 
 
+	li $v0, 1
+	add $a0, $s0, $zero
+	syscall
 	
 	li $v0, 10
 	syscall
