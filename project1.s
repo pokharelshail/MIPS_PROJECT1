@@ -53,8 +53,15 @@ more:
 	bgt $a0, $t2, Novalue
 	bge $a0, $t1, Numeric
 
+
 Novalue:
 	add $s0, $s0, $zero
+	j Increment
+
+Numeric:
+	li $s2, -48	
+	add $s3, $a0, $s2
+	add $s0, $s0, $s3	
 	j Increment
 
 	
