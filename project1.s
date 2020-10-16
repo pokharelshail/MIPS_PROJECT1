@@ -4,8 +4,7 @@
 
 inputText:.asciiz "Input: "
 base28num:.space 11
-newline:.asciiz "\n"
-outputText: .asciiz "Output: "
+
 
 .text
 
@@ -80,13 +79,6 @@ Lowercase:
 
 End:
 	
-	li $v0, 4
-	la $a0, newline
-	syscall 
-
-	li $v0, 4
-	la $a0, outputText
-	syscall
 
 	li $v0, 1
 	add $a0, $s0, $zero
