@@ -1,4 +1,4 @@
-#base 28 a-r
+#base 28 
 .data
 inputText:.asciiz "Input: "
 base28num:.space 11
@@ -16,6 +16,9 @@ main:
 	la $a0, base28num
 	li $a1, 11
 	syscall
+
+	la $s1, base28num
+	addi $s4, $s1, 10 
 
 
 	
